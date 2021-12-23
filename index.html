@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contactos</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/funciones.js" as="script">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- fuente : ubuntu regular 400 y bold 700-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Agenda de contacto simple que almacena en local storage los contactos -->
+
+    <header>
+        <h1>Agenda de contactos en local storage</h1>
+    </header>
+
+    <div class="contenedor-principal">
+
+        <main class="contenedor-formulario">
+
+            <!-- formulario -->
+            <form action="" class="formulario">
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required placeholder="Nombre" pattern="[a-zA-Z ]{2,25}" autofocus>
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero" min="1" required placeholder="Número" pattern="[0-9]">
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="campo">
+                    <label for="detalles">Detalles</label>
+                    <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="200" placeholder="Otros detalles"></textarea>
+                </div>
+
+                <button type="submit" id="btn-guardar" class="btn-guardar campo" accesskey="g"> <span class="material-icons">mood</span> Guardar <span class="material-icons">check</span></button>
+
+            </form>
+
+            <!-- listado -->
+            <div class="listado">
+                <h2 class="underlinePersonalizado">Listado</h2>
+
+                <div class="lista">
+                    <h3>Nombre</h3>
+                    <h3>Número</h3>
+                    <h3>Correo</h3>
+                    <h3>Detalles</h3>
+                    <h3 class="botones">Editar</h3>
+                    <h3 class="botones">Borrar</h3>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer class="contenedor-footer">
+        <small class="footer__texto">Todos los derechos reservados 2021</small>
+        <small class="footer__autor">By Neel</small>
+    </footer>
+
+    <script src="js/funciones.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
